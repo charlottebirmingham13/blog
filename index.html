@@ -13,28 +13,28 @@
   </header>
 
   <main>
-    <section>
-      <h2 class="section-title">diary</h2>
-      <ul id="post-list" class="post-list" aria-busy="true">
-        <li class="loading">Loading…</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2 class="section-title">translations</h2>
-      <ul id="translation-list" class="post-list" aria-busy="true">
-        <li class="loading">Loading…</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2 class="section-title">links</h2>
-      <ul class="post-list">
-        <li class="post-summary">
-          <a href="https://open.spotify.com/playlist/2ODZHgIKo9rf26FdrrIhIh" target="_blank" rel="noopener">my playlist</a>
-        </li>
-      </ul>
-    </section>
+    <ul class="tree">
+      <li>library
+        <ul>
+          <li>translations
+            <ul id="translation-list" data-manifest="translations/index.json" data-type="translation" data-limit="3" data-all="translations.html" aria-busy="true">
+              <li class="loading">Loading…</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>diary
+        <ul id="diary-list" data-manifest="posts/index.json" data-limit="3" data-all="diary.html" aria-busy="true">
+          <li class="loading">Loading…</li>
+        </ul>
+      </li>
+      <li>links
+        <ul>
+          <li><a href="https://open.spotify.com/playlist/2ODZHgIKo9rf26FdrrIhIh" target="_blank" rel="noopener">my playlist</a></li>
+        </ul>
+      </li>
+      <li class="dim">contact (soon)</li>
+    </ul>
   </main>
 
   <script src="app.js"></script>
