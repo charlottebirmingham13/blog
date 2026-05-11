@@ -9,3 +9,5 @@ I believe Bulgakov was right about everything.
 I am still learning, to technology and the people who build things with it. I think in fragments, and too many stuff all at once, and not know what i'm thinking. I feel in paragraphs and it's my vulnerable parts. I regret showing my emotional side to some people.
 
 This is where i decided to put everything. I am gonna write in english for now. Ocassionally in Persian someday.
+
+[playlist](https://open.spotify.com/playlist/2ODZHgIKo9rf26FdrrIhIh)
