@@ -3,31 +3,39 @@ const isPostPage = location.pathname.endsWith('post.html');
 if (isPostPage) {
   loadPost();
 } else {
-  loadList('post-list', 'posts/index.json');
-  loadList('translation-list', 'translations/index.json', { type: 'translation' });
+  document.querySelectorAll('[data-manifest]').forEach(list => {
+    loadList(list, list.dataset.manifest, {
+      type: list.dataset.type,
+      allHref: list.dataset.all,
+      limit: parseInt(list.dataset.limit, 10) || Infinity,
+    });
+  });
 }
 
-async function loadList(elementId, manifestUrl, options = {}) {
-  const list = document.getElementById(elementId);
-  if (!list) return;
+async function loadList(list, manifestUrl, options = {}) {
   try {
     const res = await fetch(manifestUrl);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const items = await res.json();
     items.sort((a, b) => b.date.localeCompare(a.date));
-    if (items.length === 0) {
-      list.innerHTML = '<li class="dim">—</li>';
+
+    const visible = items.slice(0, options.limit || Infinity);
+    const typeParam = options.type ? `&type=${encodeURIComponent(options.type)}` : '';
+
+    let html = '';
+    if (visible.length === 0) {
+      html += '<li class="dim">(nothing yet)</li>';
     } else {
-      const typeParam = options.type ? `&type=${encodeURIComponent(options.type)}` : '';
-      list.innerHTML = items.map(item => `
-        <li class="post-summary">
-          <a href="post.html?slug=${encodeURIComponent(item.slug)}${typeParam}">
-            <h2 class="post-summary-title" dir="auto">${escapeHtml(item.title)}</h2>
-            <time class="post-summary-date" datetime="${escapeHtml(item.date)}">${formatDate(item.date)}</time>
-          </a>
-        </li>
+      html += visible.map(item => `
+        <li><a href="post.html?slug=${encodeURIComponent(item.slug)}${typeParam}">${formatDate(item.date)}: ${escapeHtml(item.title)}</a></li>
       `).join('');
     }
+
+    if (options.allHref) {
+      html += `<li><a href="${escapeHtml(options.allHref)}">all…</a></li>`;
+    }
+
+    list.innerHTML = html;
     list.removeAttribute('aria-busy');
   } catch (err) {
     list.innerHTML = `<li class="error">Couldn't load: ${escapeHtml(err.message)}</li>`;
@@ -82,11 +90,5 @@ function escapeHtml(s) {
 function formatDate(iso) {
   const d = new Date(iso);
   if (isNaN(d)) return iso;
-  if (iso.includes('T')) {
-    return d.toLocaleString(undefined, {
-      year: 'numeric', month: 'long', day: 'numeric',
-      hour: 'numeric', minute: '2-digit'
-    });
-  }
   return d.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
 }
