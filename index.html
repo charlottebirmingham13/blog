@@ -4,17 +4,26 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="color-scheme" content="dark">
-  <title>Blog</title>
+  <title>Charlotte</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="site-header">
-    <h1 class="site-title"><a href="./">Blog</a></h1>
+    <div class="site-bar">
+      <h1 class="site-title"><a href="./">Charlotte</a></h1>
+      <nav class="site-nav">
+        <a href="./" aria-current="page">Home</a>
+        <a href="posts.html">Posts</a>
+        <a href="about.html">About</a>
+        <a href="now.html">Now</a>
+        <a href="links.html">Links</a>
+      </nav>
+    </div>
     <p class="site-tagline" dir="auto">Short notes in English and فارسی.</p>
   </header>
 
   <main>
-    <ul id="post-list" class="post-list" aria-busy="true">
+    <ul id="post-list" class="post-list" data-limit="5" aria-busy="true">
       <li class="loading">Loading…</li>
     </ul>
   </main>
