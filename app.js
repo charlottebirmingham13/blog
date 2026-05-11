@@ -2,17 +2,19 @@ const isPostPage = location.pathname.endsWith('post.html');
 
 if (isPostPage) {
   loadPost();
-} else {
+} else if (document.getElementById('post-list')) {
   loadList();
 }
 
 async function loadList() {
   const list = document.getElementById('post-list');
+  const limit = parseInt(list.dataset.limit, 10) || Infinity;
   try {
     const res = await fetch('posts/index.json');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const posts = await res.json();
-    posts.sort((a, b) => b.date.localeCompare(a.date));
+    const all = await res.json();
+    all.sort((a, b) => b.date.localeCompare(a.date));
+    const posts = all.slice(0, limit);
     list.innerHTML = posts.map(p => `
       <li class="post-summary">
         <a href="post.html?slug=${encodeURIComponent(p.slug)}">
@@ -56,7 +58,7 @@ async function loadPost() {
     if (indexRes.ok) {
       const posts = await indexRes.json();
       const meta = posts.find(p => p.slug === slug);
-      if (meta) document.title = `${meta.title} — Blog`;
+      if (meta) document.title = `${meta.title} — Charlotte`;
     }
   } catch (err) {
     article.innerHTML = `<p class="error">Couldn't load post: ${escapeHtml(err.message)}</p>`;
