@@ -1,0 +1,219 @@
+:root {
+  --bg: #0f0f10;
+  --bg-elev: #18181b;
+  --fg: #d6d6d4;
+  --fg-muted: #8c8c8a;
+  --accent: #c9a86b;
+  --error: #d97a7a;
+  --rule: #26262a;
+  --max-w: 38rem;
+  --serif: ui-serif, Georgia, "Iowan Old Style", Charter, "Vazirmatn", "Noto Naskh Arabic", Tahoma, serif;
+  --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Vazirmatn", "Noto Sans Arabic", Tahoma, sans-serif;
+  --mono: ui-monospace, "JetBrains Mono", "Fira Code", Menlo, Consolas, monospace;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  background: var(--bg);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--fg);
+  background: var(--bg);
+  padding: 4rem 1.25rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.site-header,
+main,
+.site-footer {
+  width: 100%;
+  max-width: var(--max-w);
+}
+
+.site-header { margin-bottom: 3rem; }
+
+.site-title {
+  font-family: var(--sans);
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin: 0 0 0.5rem;
+}
+
+.site-title a {
+  color: var(--fg);
+  text-decoration: none;
+}
+
+.site-title a:hover { color: var(--accent); }
+
+.site-tagline {
+  margin: 0;
+  color: var(--fg-muted);
+  font-size: 0.95rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover { text-decoration: underline; }
+
+.back-row { margin: 0; }
+
+.back {
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  color: var(--fg-muted);
+}
+
+.back:hover { color: var(--accent); text-decoration: none; }
+
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.post-summary {
+  border-bottom: 1px solid var(--rule);
+  padding: 1.5rem 0;
+}
+
+.post-summary:first-child { padding-top: 0; }
+.post-summary:last-child { border-bottom: 0; }
+
+.post-summary a {
+  display: block;
+  color: inherit;
+}
+
+.post-summary a:hover { text-decoration: none; }
+.post-summary a:hover .post-summary-title { color: var(--accent); }
+
+.post-summary-title {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem;
+  transition: color 0.15s;
+}
+
+.post-summary-date {
+  font-family: var(--sans);
+  font-size: 0.825rem;
+  color: var(--fg-muted);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.post-summary-excerpt {
+  margin: 0;
+  color: var(--fg-muted);
+  font-size: 0.975rem;
+}
+
+.post h1 {
+  font-size: 1.75rem;
+  line-height: 1.25;
+  margin: 0 0 0.5rem;
+}
+
+.post h2 {
+  font-size: 1.25rem;
+  margin: 2.5rem 0 0.75rem;
+}
+
+.post h3 {
+  font-size: 1.1rem;
+  margin: 2rem 0 0.5rem;
+}
+
+.post p { margin: 1.1rem 0; }
+
+.post ul, .post ol {
+  padding-inline-start: 1.5rem;
+}
+
+.post li { margin: 0.3rem 0; }
+
+.post blockquote {
+  border-inline-start: 3px solid var(--accent);
+  padding-inline-start: 1rem;
+  margin: 1.5rem 0;
+  color: var(--fg-muted);
+  font-style: italic;
+}
+
+.post code {
+  font-family: var(--mono);
+  font-size: 0.9em;
+  background: var(--bg-elev);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+}
+
+.post pre {
+  background: var(--bg-elev);
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.post pre code {
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+}
+
+.post hr {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 2.5rem 0;
+}
+
+.post a { text-decoration: underline; text-underline-offset: 2px; }
+
+.site-footer {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--rule);
+  font-family: var(--sans);
+  font-size: 0.825rem;
+  color: var(--fg-muted);
+  text-align: center;
+}
+
+.site-footer p { margin: 0; }
+
+.loading, .error {
+  color: var(--fg-muted);
+  font-style: italic;
+}
+
+.error { color: var(--error); }
+
+[dir="rtl"] {
+  font-family: "Vazirmatn", "Noto Naskh Arabic", Tahoma, var(--serif);
+  line-height: 1.85;
+}
+
+[dir="rtl"] code,
+[dir="rtl"] pre {
+  font-family: var(--mono);
+  direction: ltr;
+  text-align: left;
+}

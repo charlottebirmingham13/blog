@@ -1,0 +1,20 @@
+[
+  {
+    "slug": "hello-world",
+    "title": "Hello, world",
+    "date": "2026-05-11",
+    "excerpt": "A first post — what this blog is for and how it's built."
+  },
+  {
+    "slug": "notes-in-two-scripts",
+    "title": "Notes in two scripts",
+    "date": "2026-05-09",
+    "excerpt": "Mixing English and Persian in the same post — یادداشت‌های کوتاه."
+  },
+  {
+    "slug": "on-minimalism",
+    "title": "On minimalism",
+    "date": "2026-05-04",
+    "excerpt": "Why I'm keeping this site to plain HTML, CSS, and a sprinkle of JS."
+  }
+]
