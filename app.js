@@ -2,37 +2,44 @@ const isPostPage = location.pathname.endsWith('post.html');
 
 if (isPostPage) {
   loadPost();
-} else if (document.getElementById('post-list')) {
-  loadList();
+} else {
+  loadList('post-list', 'posts/index.json');
+  loadList('translation-list', 'translations/index.json', { type: 'translation' });
 }
 
-async function loadList() {
-  const list = document.getElementById('post-list');
-  const limit = parseInt(list.dataset.limit, 10) || Infinity;
+async function loadList(elementId, manifestUrl, options = {}) {
+  const list = document.getElementById(elementId);
+  if (!list) return;
   try {
-    const res = await fetch('posts/index.json');
+    const res = await fetch(manifestUrl);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const all = await res.json();
-    all.sort((a, b) => b.date.localeCompare(a.date));
-    const posts = all.slice(0, limit);
-    list.innerHTML = posts.map(p => `
-      <li class="post-summary">
-        <a href="post.html?slug=${encodeURIComponent(p.slug)}">
-          <h2 class="post-summary-title" dir="auto">${escapeHtml(p.title)}</h2>
-          <time class="post-summary-date" datetime="${escapeHtml(p.date)}">${formatDate(p.date)}</time>
-          <p class="post-summary-excerpt" dir="auto">${escapeHtml(p.excerpt)}</p>
-        </a>
-      </li>
-    `).join('');
+    const items = await res.json();
+    items.sort((a, b) => b.date.localeCompare(a.date));
+    if (items.length === 0) {
+      list.innerHTML = '<li class="dim">—</li>';
+    } else {
+      const typeParam = options.type ? `&type=${encodeURIComponent(options.type)}` : '';
+      list.innerHTML = items.map(item => `
+        <li class="post-summary">
+          <a href="post.html?slug=${encodeURIComponent(item.slug)}${typeParam}">
+            <h2 class="post-summary-title" dir="auto">${escapeHtml(item.title)}</h2>
+            <time class="post-summary-date" datetime="${escapeHtml(item.date)}">${formatDate(item.date)}</time>
+          </a>
+        </li>
+      `).join('');
+    }
     list.removeAttribute('aria-busy');
   } catch (err) {
-    list.innerHTML = `<li class="error">Couldn't load posts: ${escapeHtml(err.message)}</li>`;
+    list.innerHTML = `<li class="error">Couldn't load: ${escapeHtml(err.message)}</li>`;
   }
 }
 
 async function loadPost() {
   const article = document.getElementById('post');
-  const slug = new URLSearchParams(location.search).get('slug') || '';
+  const params = new URLSearchParams(location.search);
+  const slug = params.get('slug') || '';
+  const type = params.get('type') || 'post';
+  const folder = type === 'translation' ? 'translations' : 'posts';
 
   if (!/^[a-z0-9-]+$/i.test(slug)) {
     article.innerHTML = '<p class="error">No post specified.</p>';
@@ -42,11 +49,11 @@ async function loadPost() {
 
   try {
     const [indexRes, mdRes] = await Promise.all([
-      fetch('posts/index.json'),
-      fetch(`posts/${slug}.md`),
+      fetch(`${folder}/index.json`),
+      fetch(`${folder}/${slug}.md`),
     ]);
 
-    if (!mdRes.ok) throw new Error(mdRes.status === 404 ? 'Post not found' : `HTTP ${mdRes.status}`);
+    if (!mdRes.ok) throw new Error(mdRes.status === 404 ? 'Not found' : `HTTP ${mdRes.status}`);
     const md = await mdRes.text();
 
     article.innerHTML = marked.parse(md);
@@ -56,12 +63,12 @@ async function loadPost() {
     article.removeAttribute('aria-busy');
 
     if (indexRes.ok) {
-      const posts = await indexRes.json();
-      const meta = posts.find(p => p.slug === slug);
+      const items = await indexRes.json();
+      const meta = items.find(p => p.slug === slug);
       if (meta) document.title = `${meta.title} — Charlotte`;
     }
   } catch (err) {
-    article.innerHTML = `<p class="error">Couldn't load post: ${escapeHtml(err.message)}</p>`;
+    article.innerHTML = `<p class="error">Couldn't load: ${escapeHtml(err.message)}</p>`;
     article.removeAttribute('aria-busy');
   }
 }
@@ -75,5 +82,11 @@ function escapeHtml(s) {
 function formatDate(iso) {
   const d = new Date(iso);
   if (isNaN(d)) return iso;
+  if (iso.includes('T')) {
+    return d.toLocaleString(undefined, {
+      year: 'numeric', month: 'long', day: 'numeric',
+      hour: 'numeric', minute: '2-digit'
+    });
+  }
   return d.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
 }
