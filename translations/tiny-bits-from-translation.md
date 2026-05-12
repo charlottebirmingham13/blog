@@ -4,7 +4,7 @@
 
 *The Maidens — Alex Michaelides*
 
-Agar qadimgi Yunonistonda tug'ilganimda, osmon qizil alangali kometalar bilan yomon falokatlar boshlanishini bashorat qilib, yulduzlar mening dunyoga kelishimni qora taqdirning xabarchisi sifatida ko'rsatgan bo'lar edi. Lekin aslida hech narsa yuz bermadi, hatto tug'ilishim ham qandaydir muhim voqea emas edi. Hayotimni izdan chiqarib, meni shu mavjudotga aylantirgantan otam, o'sha paytda yonimda bo'lmagan. U fermadagi ishchilar bilan karta o'ynab, sigara tutatib, viski ichib, tun bo'yi maza qilib o'tirgan edi.
+Agar qadimgi Yunonistonda tug'ilganimda, osmon qizil alangali kometalar bilan yomon falokatlar boshlanishini bashorat qilib, yulduzlar mening dunyoga kelishimni qora taqdirning xabarchisi sifatida ko'rsatgan bo'lar edi. Lekin aslida hech narsa yuz bermadi, hatto tug'ilishim ham qandaydir muhim voqea emas edi. Hayotimni izdan chiqarib, meni shu mavjudotga aylantirgan otam, o'sha paytda yonimda bo'lmagan. U fermadagi ishchilar bilan karta o'ynab, sigara tutatib, viski ichib, tun bo'yi maza qilib o'tirgan edi.
 
 Onamni tasavvur qilishga urinsam ko'zlarimni mahkam yumib, diqqat bilan qarasam ham u xira, mavhum ko'rinadi. Go'zal onam, atigi o'n to'qqiz yoshli qiz, kasalxonada shaxsiy xonasida yolg'iz o'tiribdi. U koridorning narigi chekkasida hamshiralar kulib, suhbatlashayotganini eshitadi. U yolg'iz edi lekin bu uni cho'chitmaydi. Aksincha, yolg'izlik unga xotirjamlik olib keladi, o'z xayollari bilan yolg'iz qolishdan qo'rqmasdi. Faqat bitta narsa aniq: tez orada onaga aylanadi. Va chaqaloqlar gapirmaydilar.
 
