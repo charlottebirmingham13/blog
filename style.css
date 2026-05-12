@@ -95,6 +95,8 @@ a:hover { text-decoration: underline; }
 .tree li.error { color: var(--fg-muted); }
 .tree li.error { color: var(--error); }
 
+.tree + article { margin-top: 2rem; }
+
 .post h1 {
   font-size: 1.5rem;
   line-height: 1.3;

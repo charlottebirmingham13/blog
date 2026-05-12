@@ -51,6 +51,9 @@ async function loadPost() {
   const type = params.get('type') || 'post';
   const folder = type === 'translation' ? 'translations' : 'posts';
 
+  const backLink = document.getElementById('post-back');
+  if (backLink) backLink.href = type === 'translation' ? 'translations.html' : 'diary.html';
+
   if (!/^[a-z0-9-]+$/i.test(slug)) {
     article.innerHTML = '<p class="error">No post specified.</p>';
     article.removeAttribute('aria-busy');
