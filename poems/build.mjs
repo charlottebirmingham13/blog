@@ -79,6 +79,8 @@ for (const { heading, slug, title, author } of POEMS) {
   }
   let body = raw
     .filter(l => l.trim() !== '---')          // drop "---" rules
+    .map(l => l.replace(/^[ \t]+/, ''))       // de-indent: 4+ leading spaces
+                                              // would parse as a code block
     .join('\n')
     .replace(/^\s+|\s+$/g, '');               // trim outer blank lines
   // Drop a leading whole-line italic author tag (the Modern Poems section
