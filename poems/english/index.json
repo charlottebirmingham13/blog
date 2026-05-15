@@ -1,0 +1,102 @@
+[
+  {
+    "slug": "the-raven",
+    "title": "The Raven",
+    "author": "Edgar Allan Poe"
+  },
+  {
+    "slug": "alone",
+    "title": "Alone",
+    "author": "Edgar Allan Poe"
+  },
+  {
+    "slug": "annabel-lee",
+    "title": "Annabel Lee",
+    "author": "Edgar Allan Poe"
+  },
+  {
+    "slug": "a-dream-within-a-dream",
+    "title": "A Dream Within a Dream",
+    "author": "Edgar Allan Poe"
+  },
+  {
+    "slug": "spirits-of-the-dead",
+    "title": "Spirits of the Dead",
+    "author": "Edgar Allan Poe"
+  },
+  {
+    "slug": "to-the-river",
+    "title": "To the River",
+    "author": "Edgar Allan Poe"
+  },
+  {
+    "slug": "in-memoriam",
+    "title": "In Memoriam A.H.H. (excerpt)",
+    "author": "Alfred, Lord Tennyson"
+  },
+  {
+    "slug": "the-lady-of-shalott",
+    "title": "The Lady of Shalott (excerpt)",
+    "author": "Alfred, Lord Tennyson"
+  },
+  {
+    "slug": "ulysses",
+    "title": "Ulysses (excerpt)",
+    "author": "Alfred, Lord Tennyson"
+  },
+  {
+    "slug": "im-nobody",
+    "title": "I'm Nobody! Who are you?",
+    "author": "Emily Dickinson"
+  },
+  {
+    "slug": "wild-nights",
+    "title": "Wild Nights — Wild Nights!",
+    "author": "Emily Dickinson"
+  },
+  {
+    "slug": "i-felt-a-funeral-in-my-brain",
+    "title": "I felt a Funeral, in my Brain",
+    "author": "Emily Dickinson"
+  },
+  {
+    "slug": "paradise-lost-book-i",
+    "title": "Paradise Lost, Book I (excerpt)",
+    "author": "John Milton"
+  },
+  {
+    "slug": "paradise-lost-book-xii",
+    "title": "Paradise Lost, Book XII (excerpt)",
+    "author": "John Milton"
+  },
+  {
+    "slug": "my-last-duchess",
+    "title": "My Last Duchess (excerpt)",
+    "author": "Robert Browning"
+  },
+  {
+    "slug": "prospice",
+    "title": "Prospice (excerpt)",
+    "author": "Robert Browning"
+  },
+  {
+    "slug": "do-not-stand-at-my-grave-and-weep",
+    "title": "Do Not Stand at My Grave and Weep",
+    "author": "Clare Harner"
+  },
+  {
+    "slug": "i-dont-mean-to-move-too-fast",
+    "title": "I Don't Mean to Move Too Fast",
+    "author": "Daniel Garrison"
+  },
+  {
+    "slug": "untitled",
+    "title": "Untitled",
+    "author": "Author unknown"
+  },
+  {
+    "slug": "the-tortured-poets-department",
+    "title": "The Tortured Poets Department",
+    "author": "Taylor Swift"
+  }
+]

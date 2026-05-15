@@ -1,0 +1,13 @@
+# I'm Nobody! Who are you?
+
+*Emily Dickinson.*
+
+I'm Nobody! Who are you?
+Are you—Nobody—Too?
+Then there's a pair of us!
+Don't tell! they'd advertise—you know!
+
+How dreary—to be—Somebody!
+How public—like a Frog—
+To tell one's name—the livelong June—
+To an admiring Bog!
