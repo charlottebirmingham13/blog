@@ -17,7 +17,8 @@ async function loadList(list, manifestUrl, options = {}) {
     const res = await fetch(manifestUrl);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const items = await res.json();
-    items.sort((a, b) => b.date.localeCompare(a.date));
+    if (items.length && items[0].date) items.sort ((a,b) =>
+  b.date.localeCompare(a.date));
 
     const visible = items.slice(0, options.limit || Infinity);
     const typeParam = options.type ? `&type=${encodeURIComponent(options.type)}` : '';
