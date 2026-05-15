@@ -523,12 +523,3 @@ and I can't wait to.
 *unknown*
 
 You made me fall in love, then left…
-
----
-
-### The Tortured Poets Department
-*Taylor Swift (2024)*
-
-All's fair in love and poetry…
-
-*Excerpt only — read the full prologue poem in* The Tortured Poets Department *(Taylor Swift, 2024).*

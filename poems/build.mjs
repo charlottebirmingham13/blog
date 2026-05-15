@@ -41,7 +41,6 @@ const POEMS = [
   { heading: 'Do Not Stand at My Grave and Weep', slug: 'do-not-stand-at-my-grave-and-weep', title: 'Do Not Stand at My Grave and Weep', author: 'Clare Harner' },
   { heading: "I Don't Mean to Move Too Fast",     slug: 'i-dont-mean-to-move-too-fast',  title: "I Don't Mean to Move Too Fast",      author: 'Daniel Garrison' },
   { heading: 'Untitled',                          slug: 'untitled',                      title: 'Untitled',                           author: 'unknown' },
-  { heading: 'The Tortured Poets Department',     slug: 'the-tortured-poets-department', title: 'The Tortured Poets Department',       author: 'Taylor Swift' },
 ];
 
 const text = await readFile(SRC, 'utf8');
