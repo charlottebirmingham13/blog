@@ -2,4 +2,6 @@
 
 *Taylor Swift.*
 
-*Full text not included out of respect for copyright. Read it in The Tortured Poets Department.*
+All's fair in love and poetry…
+
+*Excerpt only — read the full prologue poem in* The Tortured Poets Department *(Taylor Swift, 2024).*
