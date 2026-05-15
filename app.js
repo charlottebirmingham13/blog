@@ -1,7 +1,11 @@
-const isPostPage = location.pathname.endsWith('post.html');
+const path = location.pathname;
+const isPostPage = path.endsWith('post.html');
+const isPoemsPage = path.endsWith('poems.html');
 
 if (isPostPage) {
   loadPost();
+} else if (isPoemsPage) {
+  loadPoems();
 } else {
   document.querySelectorAll('[data-manifest]').forEach(list => {
     loadList(list, list.dataset.manifest, {
@@ -50,10 +54,28 @@ async function loadPost() {
   const params = new URLSearchParams(location.search);
   const slug = params.get('slug') || '';
   const type = params.get('type') || 'post';
-  const folder = type === 'translation' ? 'translations' : 'posts';
+  const lang = (params.get('lang') || '').toLowerCase();
+
+  let folder, backHref;
+  if (type === 'poem') {
+    folder = `poems/${lang}`;
+    backHref = `poems.html?lang=${encodeURIComponent(lang)}`;
+  } else if (type === 'translation') {
+    folder = 'translations';
+    backHref = 'translations.html';
+  } else {
+    folder = 'posts';
+    backHref = 'diary.html';
+  }
 
   const backLink = document.getElementById('post-back');
-  if (backLink) backLink.href = type === 'translation' ? 'translations.html' : 'diary.html';
+  if (backLink) backLink.href = backHref;
+
+  if (type === 'poem' && !/^[a-z]+$/.test(lang)) {
+    article.innerHTML = '<p class="error">No poem specified.</p>';
+    article.removeAttribute('aria-busy');
+    return;
+  }
 
   if (!/^[a-z0-9-]+$/i.test(slug)) {
     article.innerHTML = '<p class="error">No post specified.</p>';
@@ -70,6 +92,7 @@ async function loadPost() {
     if (!mdRes.ok) throw new Error(mdRes.status === 404 ? 'Not found' : `HTTP ${mdRes.status}`);
     const md = await mdRes.text();
 
+    marked.setOptions({ breaks: true });
     article.innerHTML = marked.parse(md);
     article.querySelectorAll('p, h1, h2, h3, h4, h5, h6, li, blockquote').forEach(el => {
       el.setAttribute('dir', 'auto');
@@ -84,6 +107,56 @@ async function loadPost() {
   } catch (err) {
     article.innerHTML = `<p class="error">Couldn't load: ${escapeHtml(err.message)}</p>`;
     article.removeAttribute('aria-busy');
+  }
+}
+
+async function loadPoems() {
+  const list = document.getElementById('poem-list');
+  const heading = document.getElementById('poem-heading');
+  const back = document.getElementById('poem-back');
+  const params = new URLSearchParams(location.search);
+  const lang = (params.get('lang') || '').toLowerCase();
+
+  try {
+    if (lang) {
+      if (!/^[a-z]+$/.test(lang)) throw new Error('Unknown language');
+      if (heading) heading.textContent = lang;
+      if (back) back.href = 'poems.html';
+      document.title = `${lang} poems — Charlotte`;
+
+      const res = await fetch(`poems/${lang}/index.json`);
+      if (res.status === 404) {
+        list.innerHTML = '<li class="dim">(nothing yet)</li>';
+        list.removeAttribute('aria-busy');
+        return;
+      }
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const items = await res.json();
+
+      if (items.length === 0) {
+        list.innerHTML = '<li class="dim">(nothing yet)</li>';
+      } else {
+        list.innerHTML = items.map(item => {
+          const href = `post.html?slug=${encodeURIComponent(item.slug)}&type=poem&lang=${encodeURIComponent(lang)}`;
+          const author = item.author ? ` <span class="dim">— ${escapeHtml(item.author)}</span>` : '';
+          return `<li><a href="${href}">${escapeHtml(item.title)}</a>${author}</li>`;
+        }).join('');
+      }
+    } else {
+      if (back) back.href = './';
+      const res = await fetch('poems/index.json');
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const langs = await res.json();
+      list.innerHTML = langs.length === 0
+        ? '<li class="dim">(nothing yet)</li>'
+        : langs.map(l =>
+            `<li><a href="poems.html?lang=${encodeURIComponent(l)}">${escapeHtml(l)}</a></li>`
+          ).join('');
+    }
+    list.removeAttribute('aria-busy');
+  } catch (err) {
+    list.innerHTML = `<li class="error">Couldn't load: ${escapeHtml(err.message)}</li>`;
+    list.removeAttribute('aria-busy');
   }
 }
 
