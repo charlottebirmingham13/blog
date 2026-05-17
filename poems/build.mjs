@@ -1,16 +1,3 @@
-// Splits english-poems.md (a single author-grouped compilation) into one
-// markdown file per poem under poems/english/, plus an index.json manifest.
-//
-// english-poems.md stays the source of truth — add a poem there (### Title),
-// add a line to POEMS below, then: node poems/build.mjs
-//
-// Each generated file follows the same shape as translations/*.md:
-//   # <title>
-//
-//   *<author>.*
-//
-//   <verse>
-
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
@@ -19,8 +6,6 @@ const ROOT = dirname(fileURLToPath(import.meta.url));
 const SRC = join(ROOT, 'english-poems.md');
 const OUT = join(ROOT, 'english');
 
-// Keyed by the exact "### " heading text in english-poems.md.
-// Order here = order in the listing.
 const POEMS = [
   { heading: 'The Raven',                         slug: 'the-raven',                     title: 'The Raven',                          author: 'Edgar Allan Poe' },
   { heading: 'Alone',                             slug: 'alone',                         title: 'Alone',                              author: 'Edgar Allan Poe' },
@@ -46,8 +31,6 @@ const POEMS = [
 const text = await readFile(SRC, 'utf8');
 const lines = text.split('\n');
 
-// Walk the file: each "### " heading opens a block; any "# " or "## "
-// heading (or the next "### ") closes it.
 const blocks = new Map();
 let cur = null;
 for (const line of lines) {
@@ -77,13 +60,10 @@ for (const { heading, slug, title, author } of POEMS) {
     continue;
   }
   let body = raw
-    .filter(l => l.trim() !== '---')          // drop "---" rules
-    .map(l => l.replace(/^[ \t]+/, ''))       // de-indent: 4+ leading spaces
-                                              // would parse as a code block
+    .filter(l => l.trim() !== '---')
+    .map(l => l.replace(/^[ \t]+/, ''))
     .join('\n')
-    .replace(/^\s+|\s+$/g, '');               // trim outer blank lines
-  // Drop a leading whole-line italic author tag (the Modern Poems section
-  // carries author as "*Name (year)*" right under the heading).
+    .replace(/^\s+|\s+$/g, '');
   body = body.replace(/^\*[^*\n][^*]*\*[^\S\n]*\n+/, '');
 
   const md = `# ${title}\n\n*${author}.*\n\n${body}\n`;
