@@ -169,3 +169,46 @@ function formatDate(iso) {
   if (isNaN(d)) return iso;
   return d.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
 }
+
+/* --- privacy-friendly analytics + owner-only stats link ---------------
+   Inert until you set GC_CODE. Nothing tracks, nothing is exposed, until
+   then. Setup:
+     1. Sign up at https://www.goatcounter.com, pick a code (your subdomain).
+     2. In its settings, set the dashboard to private (login required).
+     3. Replace 'CHANGE-ME' below with your code, commit, push.
+   It's cookieless, no IPs stored, no Google. You get: visits over time,
+   referrer, rough country, device/OS/browser type — aggregate, no
+   identities (that's the privacy-friendly part, and it's the ceiling).
+   The owner link only toggles a link to your login-gated dashboard; it
+   is not a secret and not a security boundary. */
+(function () {
+  const GC_CODE = 'CHANGE-ME';
+  const OWNER_KEY = 'owner';
+  const live = GC_CODE !== 'CHANGE-ME';
+
+  if (live) {
+    const s = document.createElement('script');
+    s.async = true;
+    s.src = '//gc.zgo.at/count.js';
+    s.setAttribute('data-goatcounter', `https://${GC_CODE}.goatcounter.com/count`);
+    document.body.appendChild(s);
+  }
+
+  // Visit any page once with ?owner=<OWNER_KEY> to remember this device.
+  if (new URLSearchParams(location.search).get('owner') === OWNER_KEY) {
+    localStorage.setItem('owner', '1');
+  }
+  if (live && localStorage.getItem('owner') === '1') {
+    const header = document.querySelector('.site-header');
+    if (header) {
+      const a = document.createElement('a');
+      a.href = `https://${GC_CODE}.goatcounter.com`;
+      a.textContent = ' ·';
+      a.title = 'stats';
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.className = 'owner-stats';
+      header.appendChild(a);
+    }
+  }
+})();
