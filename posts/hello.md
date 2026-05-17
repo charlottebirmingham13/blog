@@ -1,4 +1,4 @@
-# Hello, I'm Charlotte
+# May 11, 2026
 
 I live somewhere between 4 languages, but never feel fluent in any of them. I like working at nights and sleep during the day. I learn Persian mostly to understand one poet who died before i was even born and to be closer to my roots.
 
