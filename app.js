@@ -182,7 +182,7 @@ function formatDate(iso) {
    The owner link only toggles a link to your login-gated dashboard; it
    is not a secret and not a security boundary. */
 (function () {
-  const GC_CODE = 'CHANGE-ME';
+  const GC_CODE = 'charlotte';
   const OWNER_KEY = 'owner';
   const live = GC_CODE !== 'CHANGE-ME';
 
