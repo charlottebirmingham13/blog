@@ -26,16 +26,14 @@ async function loadList(list, manifestUrl, options = {}) {
 
     const visible = items.slice(0, options.limit || Infinity);
     const typeParam = options.type ? `&type=${encodeURIComponent(options.type)}` : '';
-    const showDate = options.type !== 'translation';
 
     let html = '';
     if (visible.length === 0) {
       html += '<li class="dim">(nothing yet)</li>';
     } else {
-      html += visible.map(item => {
-        const prefix = showDate ? `${formatDate(item.date)}: ` : '';
-        return `<li><a href="post.html?slug=${encodeURIComponent(item.slug)}${typeParam}">${prefix}${escapeHtml(item.title)}</a></li>`;
-      }).join('');
+      html += visible.map(item =>
+        `<li><a href="post.html?slug=${encodeURIComponent(item.slug)}${typeParam}">${escapeHtml(item.title)}</a></li>`
+      ).join('');
     }
 
     if (options.allHref) {
