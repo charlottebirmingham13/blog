@@ -186,7 +186,16 @@ function formatDate(iso) {
   const OWNER_KEY = 'owner';
   const live = GC_CODE !== 'CHANGE-ME';
 
-  if (live) {
+  // Mark this device as the owner's the first time it's opened with
+  // ?owner=<OWNER_KEY>; remembered after that.
+  if (new URLSearchParams(location.search).get('owner') === OWNER_KEY) {
+    localStorage.setItem('owner', '1');
+  }
+  const isOwner = localStorage.getItem('owner') === '1';
+
+  // Count everyone EXCEPT this device, so your own browsing never
+  // inflates the numbers — they only ever reflect other people.
+  if (live && !isOwner) {
     const s = document.createElement('script');
     s.async = true;
     s.src = '//gc.zgo.at/count.js';
@@ -194,11 +203,7 @@ function formatDate(iso) {
     document.body.appendChild(s);
   }
 
-  // Visit any page once with ?owner=<OWNER_KEY> to remember this device.
-  if (new URLSearchParams(location.search).get('owner') === OWNER_KEY) {
-    localStorage.setItem('owner', '1');
-  }
-  if (live && localStorage.getItem('owner') === '1') {
+  if (live && isOwner) {
     const header = document.querySelector('.site-header');
     if (header) {
       const a = document.createElement('a');
