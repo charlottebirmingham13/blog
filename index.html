@@ -14,6 +14,11 @@
 
   <main>
     <ul class="tree">
+      <li>diary
+        <ul id="diary-list" data-manifest="posts/index.json" data-limit="3" data-all="diary.html" aria-busy="true">
+          <li class="loading">Loading…</li>
+        </ul>
+      </li>
       <li>library
         <ul>
           <li>translations
@@ -28,11 +33,6 @@
               <li><a href="poems.html">all…</a></li>
             </ul>
           </li>
-        </ul>
-      </li>
-      <li>diary
-        <ul id="diary-list" data-manifest="posts/index.json" data-limit="3" data-all="diary.html" aria-busy="true">
-          <li class="loading">Loading…</li>
         </ul>
       </li>
       <li>links
