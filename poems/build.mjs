@@ -65,6 +65,7 @@ const COLLECTIONS = [
       { heading: "from Where is the Friend's Home? (نشانی)",                                          slug: 'sepehri-friends-home',    title: "from Where Is the Friend's Home?",            author: 'Sohrab Sepehri' },
       { heading: 'from In the Alley',                                                                 slug: 'shamlou-in-the-alley',    title: 'from In the Alley',                           author: 'Ahmad Shamlou' },
       { heading: 'from Love Poem',                                                                    slug: 'shamlou-love-poem',       title: 'from Love Poem',                              author: 'Ahmad Shamlou' },
+      { heading: 'Walls (دیوارها)',                                                                   slug: 'shamlou-walls',           title: 'Walls',                                       author: 'Ahmad Shamlou' },
       { heading: 'آی آدم‌ها (O People)',                                                              slug: 'nima-o-people',           title: 'O People',                                    author: 'Nima Yushij' },
       { heading: "Her Own Epitaph (سنگ‌نوشته)",                                                       slug: 'parvin-epitaph',          title: 'Her Own Epitaph',                             author: "Parvin E'tesami" },
       { heading: 'دوباره می‌سازمت وطن (I Will Build You Again)',                                       slug: 'behbahani-rebuild-homeland', title: 'I Will Build You Again, My Homeland',       author: 'Simin Behbahani' },
