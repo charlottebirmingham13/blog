@@ -25,6 +25,11 @@
     "author": "Forough Farrokhzad"
   },
   {
+    "slug": "forough-the-window",
+    "title": "from The Window",
+    "author": "Forough Farrokhzad"
+  },
+  {
     "slug": "hafez-shirazi-turk",
     "title": "Ghazal — \"If that Shirazi beauty\"",
     "author": "Hafez"
@@ -42,6 +47,11 @@
   {
     "slug": "hafez-dark-night",
     "title": "Ghazal — \"Dark night, the fear of waves\"",
+    "author": "Hafez"
+  },
+  {
+    "slug": "hafez-the-cup-bearer",
+    "title": "Ghazal — \"O cup-bearer\"",
     "author": "Hafez"
   },
   {
@@ -70,6 +80,11 @@
     "author": "Rumi"
   },
   {
+    "slug": "rumi-the-lamp",
+    "title": "Ghazal — \"The sheikh with the lamp\"",
+    "author": "Rumi"
+  },
+  {
     "slug": "khayyam-from-dust",
     "title": "from the Rubáiyát — \"We came from dust\"",
     "author": "Omar Khayyam"
@@ -85,6 +100,11 @@
     "author": "Omar Khayyam"
   },
   {
+    "slug": "khayyam-the-jug",
+    "title": "from the Rubáiyát — \"This jug\"",
+    "author": "Omar Khayyam"
+  },
+  {
     "slug": "saadi-children-of-adam",
     "title": "from the Golestan — \"The children of Adam\"",
     "author": "Saadi"
@@ -93,6 +113,11 @@
     "slug": "saadi-every-breath",
     "title": "from the Golestan — \"Every breath\"",
     "author": "Saadi"
+  },
+  {
+    "slug": "baba-taher-eye-and-heart",
+    "title": "Do-bayti — \"The eye and the heart\"",
+    "author": "Baba Taher"
   },
   {
     "slug": "sepehri-waters-footfall",
@@ -113,6 +138,21 @@
     "slug": "shamlou-love-poem",
     "title": "from Love Poem",
     "author": "Ahmad Shamlou"
+  },
+  {
+    "slug": "nima-o-people",
+    "title": "O People",
+    "author": "Nima Yushij"
+  },
+  {
+    "slug": "parvin-epitaph",
+    "title": "Her Own Epitaph",
+    "author": "Parvin E'tesami"
+  },
+  {
+    "slug": "behbahani-rebuild-homeland",
+    "title": "I Will Build You Again, My Homeland",
+    "author": "Simin Behbahani"
   },
   {
     "slug": "persian-proverbs",
