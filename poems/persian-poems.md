@@ -128,6 +128,20 @@ reaches at its end the heart of the earth
 
 ---
 
+### from Only the Voice Remains (تنها صداست که می‌ماند)
+
+چرا توقف کنم؟
+تنها صداست که می‌ماند
+صدا صدا تنها صدا
+صدای خواهش شفاف آب به جاری شدن
+
+Why should I stop?
+It is only the voice that remains
+the voice, the voice, only the voice
+the voice of water's clear wish to flow
+
+---
+
 ## Hafez — حافظ (~1315–1390)
 
 ---
@@ -179,6 +193,16 @@ How can those who walk lightly on the shore know our condition?
 
 O cup-bearer, send round and offer the cup—
 for love seemed easy at first, but difficulties have arisen
+
+---
+
+### Ghazal — یوسف گمگشته
+
+یوسف گمگشته بازآید به کنعان غم مخور
+کلبه‌ی احزان شود روزی گلستان غم مخور
+
+The lost Joseph will come back to Canaan—do not grieve
+the hut of sorrows will one day become a rose garden—do not grieve
 
 ---
 
@@ -259,6 +283,16 @@ Without you, dying is not pleasant
 
 Last night the sheikh wandered the town with a lamp,
 saying: I am weary of demon and beast—it is the human I long for
+
+---
+
+### Ghazal — بمیرید بمیرید
+
+بمیرید بمیرید در این عشق بمیرید
+در این عشق چو مردید همه روح پذیرید
+
+Die, die, in this love die
+when you have died in this love, you will all receive a soul
 
 ---
 
@@ -352,6 +386,16 @@ and for every blessing, gratitude is due
 
 ---
 
+### Ghazal — به جهان خرم از آنم
+
+به جهان خرم از آنم که جهان خرم از اوست
+عاشقم بر همه عالم که همه عالم از اوست
+
+I am glad in the world because the world is glad through Him
+I love all the world, for all the world is from Him
+
+---
+
 ## Baba Taher — باباطاهر عریان (~1000–1055)
 
 ---
@@ -367,6 +411,52 @@ From the hand of the eye and the heart, both, I cry out
 for whatever the eye sees, the heart calls to mind
 I will fashion a dagger, its point of steel
 and strike it on the eye, that the heart may go free
+
+---
+
+## Ferdowsi — فردوسی (~940–1020)
+
+---
+
+### from the Shahnameh — بسی رنج بردم
+
+بسی رنج بردم در این سال سی
+عجم زنده کردم بدین پارسی
+نمیرم از این پس که من زنده‌ام
+که تخم سخن را پراکنده‌ام
+
+Much toil I bore in these thirty years
+I gave the Persians new life with this Persian tongue
+I shall not die hereafter, for I am alive
+for I have scattered the seed of the word
+
+---
+
+## Nezami Ganjavi — نظامی گنجوی (~1141–1209)
+
+---
+
+### همه عالم تن است و ایران دل
+
+همه عالم تن است و ایران دل
+نیست گوینده زین قیاس خجل
+
+All the world is a body and Iran the heart
+the one who says this is not ashamed of the comparison
+
+---
+
+## Attar of Nishapur — عطار نیشابوری (~1145–1221)
+
+---
+
+### from The Conference of the Birds (منطق‌الطیر)
+
+چون نگه کردند آن سی مرغ زود
+بی‌شک این سی مرغ آن سیمرغ بود
+
+When those thirty birds (si morgh) looked, at once,
+without doubt these thirty birds were that Simorgh
 
 ---
 
@@ -487,6 +577,24 @@ I will build you again, my homeland,
 even if with bricks of my own life
 I will set pillars to your roof
 even if with my own bones
+
+---
+
+## Fereydoun Moshiri — فریدون مشیری (1926–2000)
+
+---
+
+### The Alley (کوچه)
+
+بی تو، مهتاب‌شبی، باز از آن کوچه گذشتم
+همه تن چشم شدم، خیره به دنبال تو گشتم
+شوق دیدار تو لبریز شد از جام وجودم
+شدم آن عاشق دیوانه که بودم
+
+Without you, one moonlit night, I passed again through that alley
+all of me became eyes, staring, searching for you
+the longing to see you overflowed from the cup of my being
+I became that mad lover I once was
 
 ---
 
