@@ -34,10 +34,9 @@ const COLLECTIONS = [
     src: 'persian-poems.md',
     out: 'persian',
     poems: [
-      { heading: 'from Another Birth (تولدی دیگر)',                                                  slug: 'forough-another-birth',   title: 'from Another Birth',                          author: 'Forough Farrokhzad' },
+      { heading: 'The Gift (هدیه)',                                                                   slug: 'forough-the-gift',        title: 'The Gift',                                    author: 'Forough Farrokhzad' },
       { heading: 'from Let Us Believe in the Beginning of the Cold Season (ایمان بیاوریم به آغاز فصل سرد)', slug: 'forough-cold-season', title: 'from Let Us Believe in the Beginning of the Cold Season', author: 'Forough Farrokhzad' },
-      { heading: 'The Wind-Up Doll (عروسک کوکی)',                                                    slug: 'forough-the-wind-up-doll', title: 'The Wind-Up Doll',                           author: 'Forough Farrokhzad' },
-      { heading: 'from Reborn (تولدی دیگر — بازسرایی)',                                               slug: 'forough-reborn',          title: 'from Reborn',                                 author: 'Forough Farrokhzad' },
+      { heading: 'from The Wind-Up Doll (عروسک کوکی)',                                                slug: 'forough-the-wind-up-doll', title: 'from The Wind-Up Doll',                      author: 'Forough Farrokhzad' },
       { heading: 'The Wall (دیوار)',                                                                  slug: 'forough-the-wall',        title: 'The Wall',                                    author: 'Forough Farrokhzad' },
       { heading: 'from The Window (پنجره)',                                                           slug: 'forough-the-window',      title: 'from The Window',                             author: 'Forough Farrokhzad' },
       { heading: 'from Only the Voice Remains (تنها صداست که می‌ماند)',                                slug: 'forough-only-the-voice',  title: 'from Only the Voice Remains',                 author: 'Forough Farrokhzad' },

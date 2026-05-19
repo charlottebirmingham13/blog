@@ -6,25 +6,23 @@
 
 ---
 
-### from Another Birth (تولدی دیگر)
+### The Gift (هدیه)
 
 من از نهایت شب حرف می‌زنم
 من از نهایت تاریکی
 و از نهایت شب حرف می‌زنم
 
-I speak of the end of night
-I speak of the end of darkness
-and of the end of night
+I speak from the depth of night
+I speak from the depth of darkness
+and from the depth of night I speak
 
-اگر به خانه‌ی من آمدی
-برایم ای مهربان چراغ بیاور
+اگر به خانه‌ی من آمدی برای من ای مهربان چراغ بیاور
 و یک دریچه که از آن
 به ازدحام کوچه‌ی خوشبخت بنگرم
 
-If you come to my house
-bring me a light, dear one
-and a window through which
-I can watch the happy crowd in the alley
+If you come to my house, bring me a lamp, kind one
+and a small window through which
+I can look out at the happy, crowded street
 
 ---
 
@@ -48,7 +46,7 @@ I watered the garden
 
 ---
 
-### The Wind-Up Doll (عروسک کوکی)
+### from The Wind-Up Doll (عروسک کوکی)
 
 می‌شود مرا کوک کرد
 می‌شود مرا کوک کرد
@@ -73,20 +71,6 @@ and I with glass eyes
 in my box
 stare at a sky that with a wind-up heart
 one cannot conquer
-
----
-
-### from Reborn (تولدی دیگر — بازسرایی)
-
-من زندگی‌ام را باختم
-زندگی‌ام را به یک مرد باختم
-به چشم‌هایی که از پشت دیوار شب
-مثل آب می‌درخشیدند
-
-I lost my life
-I lost my life to a man
-to eyes that from behind the wall of night
-shimmered like water
 
 ---
 
