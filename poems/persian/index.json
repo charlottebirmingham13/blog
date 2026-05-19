@@ -30,6 +30,11 @@
     "author": "Forough Farrokhzad"
   },
   {
+    "slug": "forough-only-the-voice",
+    "title": "from Only the Voice Remains",
+    "author": "Forough Farrokhzad"
+  },
+  {
     "slug": "hafez-shirazi-turk",
     "title": "Ghazal — \"If that Shirazi beauty\"",
     "author": "Hafez"
@@ -52,6 +57,11 @@
   {
     "slug": "hafez-the-cup-bearer",
     "title": "Ghazal — \"O cup-bearer\"",
+    "author": "Hafez"
+  },
+  {
+    "slug": "hafez-lost-joseph",
+    "title": "Ghazal — \"The lost Joseph\"",
     "author": "Hafez"
   },
   {
@@ -85,6 +95,11 @@
     "author": "Rumi"
   },
   {
+    "slug": "rumi-die-in-love",
+    "title": "Ghazal — \"Die in this love\"",
+    "author": "Rumi"
+  },
+  {
     "slug": "khayyam-from-dust",
     "title": "from the Rubáiyát — \"We came from dust\"",
     "author": "Omar Khayyam"
@@ -112,6 +127,11 @@
   {
     "slug": "saadi-every-breath",
     "title": "from the Golestan — \"Every breath\"",
+    "author": "Saadi"
+  },
+  {
+    "slug": "saadi-glad-in-the-world",
+    "title": "Ghazal — \"Glad in the world\"",
     "author": "Saadi"
   },
   {
@@ -153,6 +173,26 @@
     "slug": "behbahani-rebuild-homeland",
     "title": "I Will Build You Again, My Homeland",
     "author": "Simin Behbahani"
+  },
+  {
+    "slug": "ferdowsi-thirty-years",
+    "title": "from the Shāhnāmeh — \"Much toil I bore\"",
+    "author": "Ferdowsi"
+  },
+  {
+    "slug": "nezami-iran-the-heart",
+    "title": "\"All the world a body, Iran the heart\"",
+    "author": "Nezami Ganjavi"
+  },
+  {
+    "slug": "attar-conference-birds",
+    "title": "from The Conference of the Birds",
+    "author": "Attar of Nishapur"
+  },
+  {
+    "slug": "moshiri-the-alley",
+    "title": "The Alley",
+    "author": "Fereydoun Moshiri"
   },
   {
     "slug": "persian-proverbs",
