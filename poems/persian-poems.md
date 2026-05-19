@@ -114,6 +114,20 @@ just one more moment
 
 ---
 
+### from The Window (پنجره)
+
+یک پنجره برای دیدن
+یک پنجره برای شنیدن
+یک پنجره که مثل حلقه‌ی چاهی
+در انتهای خود به قلب زمین می‌رسد
+
+One window for seeing
+one window for hearing
+one window that, like the ring of a well,
+reaches at its end the heart of the earth
+
+---
+
 ## Hafez — حافظ (~1315–1390)
 
 ---
@@ -155,6 +169,16 @@ O you who know nothing of the pleasure of our constant drinking
 
 Dark night, the fear of waves, a whirlpool so terrible—
 How can those who walk lightly on the shore know our condition?
+
+---
+
+### Ghazal — الا یا ایها الساقی
+
+الا یا ایها الساقی ادر کأساً و ناولها
+که عشق آسان نمود اول ولی افتاد مشکل‌ها
+
+O cup-bearer, send round and offer the cup—
+for love seemed easy at first, but difficulties have arisen
 
 ---
 
@@ -228,6 +252,16 @@ Without you, dying is not pleasant
 
 ---
 
+### Ghazal — دی شیخ با چراغ
+
+دی شیخ با چراغ همی‌گشت گرد شهر
+کز دیو و دد ملولم و انسانم آرزوست
+
+Last night the sheikh wandered the town with a lamp,
+saying: I am weary of demon and beast—it is the human I long for
+
+---
+
 ## Omar Khayyam — عمر خیام (1048–1131)
 
 ---
@@ -270,6 +304,20 @@ And from my going, their glory did not increase
 
 ---
 
+### Rubaiyat — این کوزه چو من
+
+این کوزه چو من عاشق زاری بوده‌ست
+در بند سر زلف نگاری بوده‌ست
+این دسته که بر گردن او می‌بینی
+دستی‌ست که بر گردن یاری بوده‌ست
+
+This jug, like me, was once a grieving lover
+bound in the tresses of some beauty's hair
+this handle that you see upon its neck
+was once a hand upon a loved one's neck
+
+---
+
 ## Saadi — سعدی (1210–1291/1292)
 
 ---
@@ -301,6 +349,24 @@ and when it comes back up, it gives joy to the soul
 
 So in every breath there are two blessings
 and for every blessing, gratitude is due
+
+---
+
+## Baba Taher — باباطاهر عریان (~1000–1055)
+
+---
+
+### Do-bayti — ز دست دیده و دل
+
+ز دست دیده و دل هر دو فریاد
+که هر چه دیده بیند دل کند یاد
+بسازم خنجری نیشش ز فولاد
+زنم بر دیده تا دل گردد آزاد
+
+From the hand of the eye and the heart, both, I cry out
+for whatever the eye sees, the heart calls to mind
+I will fashion a dagger, its point of steel
+and strike it on the eye, that the heart may go free
 
 ---
 
@@ -367,6 +433,60 @@ from fire
 I placed love
 upon the crown of my chest
 and set out on a journey
+
+---
+
+## Nima Yushij — نیما یوشیج (1897–1960)
+
+---
+
+### آی آدم‌ها (O People)
+
+آی آدم‌ها که بر ساحل نشسته شاد و خندانید
+یک نفر در آب دارد می‌سپارد جان
+یک نفر دارد که دست و پا می‌زند
+روی این دریای تند و تیره و سنگین که می‌دانید
+
+O people who sit on the shore, happy and laughing
+someone in the water is losing their life
+someone is flailing hand and foot
+on this fierce, dark, heavy sea that you know
+
+---
+
+## Parvin E'tesami — پروین اعتصامی (1907–1941)
+
+---
+
+### Her Own Epitaph (سنگ‌نوشته)
+
+این که خاک سیهش بالین است
+اختر چرخ ادب پروین است
+گر چه جز تلخی از ایام ندید
+هر چه خواهی سخنش شیرین است
+
+She whose pillow is the black earth
+is Parvin, the star of the heaven of letters
+though she saw nothing but bitterness from the days
+her every word, as much as you wish, is sweet
+
+---
+
+## Simin Behbahani — سیمین بهبهانی (1927–2014)
+
+---
+
+### دوباره می‌سازمت وطن (I Will Build You Again)
+
+دوباره می‌سازمت، وطن!
+اگر چه با خشت جان خویش
+ستون به سقف تو می‌زنم
+اگر چه با استخوان خویش
+
+I will build you again, my homeland,
+even if with bricks of my own life
+I will set pillars to your roof
+even if with my own bones
 
 ---
 
